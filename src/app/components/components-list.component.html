@@ -1,0 +1,27 @@
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Card'" [subTitle]="'Components'">
+  <p body>
+    Body Content
+  </p>
+  <p footer>
+    Footer
+  </p>
+</app-card>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Accordian'" [subTitle]="'Components'">
+  <app-accordion body [accordionItems]="accordionItems">
+  </app-accordion>
+</app-card>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Progress Bar'" [subTitle]="'Components'">
+  <app-progress-bar body [value]="progressValue"></app-progress-bar>
+
+  <button footer (click)="updateProgress()">Update</button>
+</app-card>
+
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Pomorodoro'" [subTitle]="'Components'">
+  <app-pomodoro body [value]="duration"></app-pomodoro>
+
+  <button footer (click)="onStartTimer()">Start</button>
+  <button footer (click)="onStopTimer()">Stop</button>
+  <button footer (click)="resetTimer()">Reset</button>
+</app-card>

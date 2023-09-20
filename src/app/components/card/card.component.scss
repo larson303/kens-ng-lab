@@ -1,0 +1,39 @@
+@import '../../../styles';
+
+.card-container {
+  display: grid;
+  grid-gap: 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+
+  @include box-shadow();
+
+  .card-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 10px;
+    background-color: $green;
+    color: white;
+
+    .card-title {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+    }
+  }
+
+  .card-body,
+  .card-footer {
+    padding: 10px;
+  }
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 20px;
+}

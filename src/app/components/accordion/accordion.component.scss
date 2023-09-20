@@ -1,0 +1,37 @@
+@import '../../../styles.scss';
+
+$padding: 10px 20px;
+
+.accordion-container {
+  @include box-shadow();
+
+  .item {
+    border-bottom: 1px solid rgb(221,221,2221);
+
+    .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      padding: $padding;
+
+
+      i {
+        color: $blue;
+        transition: all 0.3s ease-in-out;
+
+        &.is-expanded {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .content {
+      padding: $padding;
+      display: none;
+
+      &.is-expanded {
+        display: block;
+      }
+    }
+  }
+}
