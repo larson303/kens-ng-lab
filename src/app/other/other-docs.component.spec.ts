@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OtherListComponent } from './other-list.component';
+import { OtherDocsComponent } from './other-docs.component';
 
-describe('OtherListComponent', () => {
-  let component: OtherListComponent;
-  let fixture: ComponentFixture<OtherListComponent>;
+describe('OtherDocsComponent', () => {
+  let component: OtherDocsComponent;
+  let fixture: ComponentFixture<OtherDocsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OtherListComponent]
+      declarations: [OtherDocsComponent]
     });
-    fixture = TestBed.createComponent(OtherListComponent);
+    fixture = TestBed.createComponent(OtherDocsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

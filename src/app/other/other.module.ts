@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { OtherListComponent } from './other-list.component';
+import { OtherDocsComponent } from './other-docs.component';
 
 const routes = [
   {
     path: '',
-    component: OtherListComponent
+    component: OtherDocsComponent
   }
 ];
 
 
 @NgModule({
   declarations: [
-    OtherListComponent
+    OtherDocsComponent
   ],
   imports: [
     CommonModule,

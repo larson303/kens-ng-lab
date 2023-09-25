@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent } from './card/card.component';
-import { RouterModule } from '@angular/router';
-import { ComponentsListComponent } from './components-list.component';
-import { AccordionComponent } from './accordion/accordion.component';
-import { ProgressBarComponent } from './progress-bar/progress-bar.component';
-import { DateUtilsComponent } from '../services/date-utils/date-utils.component';
-import { StarRatingsComponent } from './star-ratings/star-ratings.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { DateUtilsComponent } from '../services/date-utils/date-utils.component';
+import { AccordionComponent } from './accordion/accordion.component';
 import { PomodoroComponent } from './pomodoro/pomodoro.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { StarRatingsComponent } from './star-ratings/star-ratings.component';
+import { CardModule } from '../common/card/card.module';
+import { ComponentDocsComponent } from './component-docs.component';
 
 const routes = [
   {
     path: '',
-    component: ComponentsListComponent
+    component: ComponentDocsComponent
   }
 ];
 
+
 @NgModule({
   declarations: [
-    CardComponent,
-    ComponentsListComponent,
+    ComponentDocsComponent,
     AccordionComponent,
     ProgressBarComponent,
     DateUtilsComponent,
@@ -31,7 +31,10 @@ const routes = [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    CardModule
+  ],
+  exports: [
   ]
 })
 export class ComponentsModule { }

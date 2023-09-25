@@ -12,16 +12,20 @@
   </app-accordion>
 </app-card>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Star Ratings'" [subTitle]="'Components'">
+  <app-star-ratings body [rating]="starRating"></app-star-ratings>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Progress Bar'" [subTitle]="'Components'">
   <app-progress-bar body [value]="progressValue"></app-progress-bar>
 
   <button footer (click)="updateProgress()">Update</button>
 </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Pomorodoro'" [subTitle]="'Components'">
+<!-- <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Pomorodoro'" [subTitle]="'Components'">
   <app-pomodoro body [value]="duration"></app-pomodoro>
 
   <button footer (click)="onStartTimer()">Start</button>
   <button footer (click)="onStopTimer()">Stop</button>
   <button footer (click)="resetTimer()">Reset</button>
-</app-card>
+</app-card> -->

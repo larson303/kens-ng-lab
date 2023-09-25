@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { AccordionItem } from './component-interfaces/accordion-item.interfaces';
-
+import { AccordionItem } from 'src/app/components/component-interfaces/accordion-item.interfaces';
 
 @Component({
-  selector: 'app-components-list',
-  templateUrl: './components-list.component.html',
-  styleUrls: ['./components-list.component.scss']
+  selector: 'app-component-docs',
+  templateUrl: './component-docs.component.html',
+  styleUrls: ['./component-docs.component.scss']
 })
-export class ComponentsListComponent {
+export class ComponentDocsComponent {
+
+  public starRating = 3.75;
 
   
   public accordionItems: AccordionItem[] = [
@@ -30,7 +31,6 @@ export class ComponentsListComponent {
     this.progressValue = 75;
   }
 
-  
   // Used for Pomodoro Timer
   public timer: any;
   public progress = 0;

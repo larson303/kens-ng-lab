@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DirectiveDocsComponent } from './directive-docs.component';
 import { RouterModule } from '@angular/router';
-import { DirectivesListComponent } from './directives-list.component';
 
 const routes = [
   {
     path: '',
-    component: DirectivesListComponent
+    component: DirectiveDocsComponent
   }
 ];
 
 @NgModule({
   declarations: [
-    DirectivesListComponent
+    DirectiveDocsComponent
   ],
   imports: [
     CommonModule,

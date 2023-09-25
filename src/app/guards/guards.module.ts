@@ -1,24 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { AdminComponent } from './admin/admin.component';
+import { GuardsDocsComponent } from './guards-docs.component';
 import { RouterModule } from '@angular/router';
-import { ServicesDocsComponent } from './services-docs.component';
 
 const routes = [
   {
     path: '',
-    component: ServicesDocsComponent
+    component: GuardsDocsComponent
   }
 ];
 
-
 @NgModule({
   declarations: [
-    ServicesDocsComponent
+    AdminComponent,
+    GuardsDocsComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
   ]
 })
-export class ServicesModule { }
+export class GuardsModule { }

@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PipesListComponent } from './pipes-list.component';
 import { RouterModule } from '@angular/router';
+import { PipesDocsComponent } from './pipes-docs.component';
 
 const routes = [
   {
     path: '',
-    component: PipesListComponent
+    component: PipesDocsComponent
   }
 ];
 
 
 @NgModule({
   declarations: [
-    PipesListComponent
+    PipesDocsComponent
   ],
   imports: [
     CommonModule,
