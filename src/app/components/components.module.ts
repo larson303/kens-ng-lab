@@ -9,6 +9,8 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { StarRatingsComponent } from './star-ratings/star-ratings.component';
 import { CardModule } from '../common/card/card.module';
 import { ComponentDocsComponent } from './component-docs.component';
+import { TopOfPageComponent } from './top-of-page/top-of-page.component';
+import { LoaderComponent } from './loader/loader.component';
 
 const routes = [
   {
@@ -25,7 +27,9 @@ const routes = [
     ProgressBarComponent,
     DateUtilsComponent,
     StarRatingsComponent,
-    PomodoroComponent
+    PomodoroComponent,
+    TopOfPageComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,

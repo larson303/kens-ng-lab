@@ -22,6 +22,11 @@
   <button footer (click)="updateProgress()">Update</button>
 </app-card>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Go To Top'" [subTitle]="'Components'">
+  <app-top-of-page body></app-top-of-page>
+</app-card>
+
+<app-top-of-page></app-top-of-page>
 <!-- <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Pomorodoro'" [subTitle]="'Components'">
   <app-pomodoro body [value]="duration"></app-pomodoro>
 

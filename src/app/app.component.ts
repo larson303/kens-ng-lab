@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kens-ng-lab';
+
+
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.url.subscribe(console.log); // UrlSegment[]
+  }
+
+
 }

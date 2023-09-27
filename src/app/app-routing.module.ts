@@ -9,11 +9,6 @@ const routes: Routes = [
     loadChildren: () => import('./components/components.module').then((m) => m.ComponentsModule)
   },
   {
-    data: { title: 'Components' },
-    path: 'Components',
-    loadChildren: () => import('./components/components.module').then((m) => m.ComponentsModule)
-  },
-  {
     data: { title: 'Directives' },
     path: 'directives',
     loadChildren: () => import('./directives/directives.module').then((m) => m.DirectivesModule)
@@ -33,7 +28,8 @@ const routes: Routes = [
     path: 'other',
     loadChildren: () => import('./other/other.module').then((m) => m.OtherModule)
   },
-  { path: '**', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent 
+},
 
 ];
 
