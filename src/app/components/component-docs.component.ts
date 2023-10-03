@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BehaviorSubject, tap, mergeMap, timer, Subscription } from 'rxjs';
 import { AccordionItem } from 'src/app/components/component-interfaces/accordion-item.interfaces';
 
 @Component({
@@ -9,7 +10,6 @@ import { AccordionItem } from 'src/app/components/component-interfaces/accordion
 export class ComponentDocsComponent {
 
   public starRating = 3.75;
-
   
   public accordionItems: AccordionItem[] = [
     {
@@ -54,6 +54,38 @@ export class ComponentDocsComponent {
   resetTimer() {
     clearInterval(this.timer);
     this.progress = this.duration;
+  }
+
+  /*
+   * Used for Loader
+   */
+
+  public isLoading: boolean = false;
+
+  private loaderRunningSubject$ = new BehaviorSubject<boolean>(false);
+  public loaderAction$ = this.loaderRunningSubject$.asObservable();
+  loaderSubscription: Subscription = new Subscription();
+  
+  toggleLoader() {
+    this.loaderSubscription = this.loaderAction$.pipe(
+      tap(() => this.toggleLoading()),
+      mergeMap(() => this.createDelayUsingTimer(5000)),
+      tap(() => this.toggleLoading())
+    ).subscribe();
+  }
+
+  toggleLoading() {
+    this.loaderRunningSubject$.next(!this.isLoading);
+    console.log("Loader is toggled: ", this.isLoading);
+  }
+
+  createDelayUsingTimer(delayValue: number) {
+    console.log(`Starting the ${delayValue} ms delay at ${new Date()}`);
+    return timer(delayValue);
+  }
+
+  onDestroy() {
+    this.loaderSubscription.unsubscribe();
   }
 
 }

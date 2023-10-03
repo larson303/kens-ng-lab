@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { tap, mergeMap, from, timer, Subject, BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-loader',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./loader.component.scss']
 })
 export class LoaderComponent {
+  @Input() public isLoading: Boolean = false;
 
 }

@@ -22,6 +22,11 @@
   <button footer (click)="updateProgress()">Update</button>
 </app-card>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader'" [subTitle]="'Components'">
+  <app-loader body [isLoading]="isLoading"></app-loader>
+  <button class="button btn-primary" footer (click)="toggleLoader()">Load</button>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Go To Top'" [subTitle]="'Components'">
   <app-top-of-page body></app-top-of-page>
 </app-card>
