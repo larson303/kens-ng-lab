@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { PipesDocsComponent } from './pipes-docs.component';
 import { TruncatePipe } from './truncate.pipe';
 import { CardModule } from '../common/card/card.module';
+import { CcFormatPipe } from './cc-format.pipe';
 
 const routes = [
   {
@@ -17,6 +18,7 @@ const routes = [
   declarations: [
     PipesDocsComponent,
     TruncatePipe,
+    CcFormatPipe,
   ],
   imports: [
     CommonModule,

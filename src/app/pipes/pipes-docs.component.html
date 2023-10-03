@@ -4,4 +4,16 @@
   </p>
 </app-card>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Credit Card Formatter'" [subTitle]="'Components'">
+  <div body>
+    <p>{{'1111222233334444' | ccFormat}}</p>
+    <p>{{'111222333444' | ccFormat}}</p>
+    <p>{{'a111222233334444' | ccFormat}}</p>
+  </div>
+  <div footer>
+    <button class="primary"></button>
+
+  </div>
+</app-card>
+
 
