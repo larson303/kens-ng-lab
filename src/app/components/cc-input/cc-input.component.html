@@ -1,0 +1,28 @@
+<div class="credit-card-input-container">
+  <div class="input-container">
+    <ng-container [ngSwitch]="ccType">
+      <i *ngSwitchCase="'3'" class="fab fa-cc-amex"></i>
+      <i *ngSwitchCase="'4'" class="fab fa-cc-visa"></i>
+      <i *ngSwitchCase="'5'" class="fab fa-cc-mastercard"></i>
+      <i *ngSwitchCase="'6'" class="fab fa-cc-discover"></i>
+      <i *ngSwitchDefault class="fab fa-credit-card"></i>
+    </ng-container>
+    <input
+      type="text"
+      [(ngModel)]="ccNumber"
+      required
+      maxlength="16"
+      [readOnly]="isReadOnly"
+    />
+  </div>
+</div>
+<br />
+<div>
+  <span>CC Number: {{ ccNumber }} & CCType: {{ ccType }}</span>
+</div>
+<!-- <div class="button-options">
+  <button type="button" (click)="toggleReadOnly()">Toggle Read Only</button>
+  <button type="button" (click)="onClearInput()" [disabled]="canClearNumbers">
+    Clear
+  </button>
+</div> -->

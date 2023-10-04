@@ -5,8 +5,8 @@
   grid-gap: 10px;
   grid-template-columns: 1fr auto;
   align-items: center;
-  padding: 10px;
-  background-color: $blue;
+  padding: 20px;
+  background-color: $primary;
   color: white;
 
   @include box-shadow();

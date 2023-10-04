@@ -10,6 +10,7 @@ import { AccordionItem } from 'src/app/components/component-interfaces/accordion
 export class ComponentDocsComponent {
 
   public starRating = 3.75;
+  ccNumber = '4321432143214321';
   
   public accordionItems: AccordionItem[] = [
     {

@@ -4,6 +4,9 @@
 @import '@fortawesome/fontawesome-free/css/all.css';
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
 
+$enable-shadows: true;
+$prefix: "mo-";
+
 * {
   scroll-behavior: smooth;
   padding: 0;
@@ -44,7 +47,7 @@ textarea {
   }
 
   &:active {
-    background-color: #6eb9f7;
+    background-color: $secondary;
     background-size: 100%;
     transition: background 0s;
   }
@@ -66,4 +69,57 @@ textarea {
     transition: background 0s;
   }
 }
+
+
+button {
+  position: relative;
+
+  display: block;
+  margin: 30px auto;
+  padding: .5rem;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: solid 1px transparent;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  
+  background-color: $tertiary;
+  color: #ecf0f1;
+  
+  transition: background-color .3s;
+  
+  :hover, :focus {
+    background-color: $peach;
+  }
+
+  :active {
+    color: $white;
+    background-color: $peach;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3) inset;
+  }
+
+  :disabled {
+    color: $gray;
+    background-color: $light-gray;
+    box-shadow: none;
+  }
+
+  :active:before {
+    transition: width .2s ease-out, padding-top .2s ease-out;
+  }
+
+}
+
+.button-options {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  padding: 1em;
+}
+
+
+// Then import Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
 

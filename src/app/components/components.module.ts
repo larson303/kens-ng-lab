@@ -11,6 +11,7 @@ import { CardModule } from '../common/card/card.module';
 import { ComponentDocsComponent } from './component-docs.component';
 import { TopOfPageComponent } from './top-of-page/top-of-page.component';
 import { LoaderComponent } from './loader/loader.component';
+import { CcInputComponent } from './cc-input/cc-input.component';
 
 const routes = [
   {
@@ -29,7 +30,8 @@ const routes = [
     StarRatingsComponent,
     PomodoroComponent,
     TopOfPageComponent,
-    LoaderComponent
+    LoaderComponent,
+    CcInputComponent
   ],
   imports: [
     CommonModule,

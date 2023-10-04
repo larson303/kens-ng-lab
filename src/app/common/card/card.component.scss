@@ -5,6 +5,7 @@
   grid-gap: 10px;
   border-radius: 3px;
   margin-top: 10px;
+  border: solid 1px $secondary;
 
   @include box-shadow();
 
@@ -14,8 +15,9 @@
     grid-gap: 10px;
     align-items: center;
     padding: 10px;
-    background-color: $green;
+    background-color: $secondary;
     color: white;
+
 
     .card-title {
       display: grid;

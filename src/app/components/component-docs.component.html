@@ -27,6 +27,22 @@
   <button class="button btn-primary" footer (click)="toggleLoader()">Load</button>
 </app-card>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'CC Input'" [subTitle]="'Components'">
+
+  <div body>
+    <app-cc-input [ccNumber]="'4321432143214321'" required [isReadOnly]="false"></app-cc-input>
+    <br>
+    <app-cc-input [ccNumber]="'3321432143214321'" required [isReadOnly]="true"></app-cc-input>
+    <br>
+    <app-cc-input [ccNumber]="'4321432143214321'" required [isReadOnly]="true"></app-cc-input>
+    <br>
+    <app-cc-input [ccNumber]="'5321432143214321'" required [isReadOnly]="true"></app-cc-input>
+    <br>
+    <app-cc-input [ccNumber]="'6321432143214321'" required [isReadOnly]="true"></app-cc-input>
+  </div>
+
+</app-card>
+
 
 
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Go To Top'" [subTitle]="'Components'">
