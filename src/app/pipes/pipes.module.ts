@@ -5,6 +5,7 @@ import { PipesDocsComponent } from './pipes-docs.component';
 import { TruncatePipe } from './truncate.pipe';
 import { CardModule } from '../common/card/card.module';
 import { CcFormatPipe } from './cc-format.pipe';
+import { FlattenPipePipe } from './flatten-pipe.pipe';
 
 const routes = [
   {
@@ -19,6 +20,7 @@ const routes = [
     PipesDocsComponent,
     TruncatePipe,
     CcFormatPipe,
+    FlattenPipePipe,
   ],
   imports: [
     CommonModule,

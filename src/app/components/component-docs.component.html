@@ -7,6 +7,11 @@
   </p>
 </app-card>
 
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader Types'" [subTitle]="'Components'">
+  <app-loader body [isLoading]="false" [loaderType]="loaderType"></app-loader>
+  <button class="button btn-primary" footer (click)="toggleLoader()">Load</button>
+</app-card>
+
 <app-card [iconClasses]="'fas fa-info-circle'" [title]="'Accordian'" [subTitle]="'Components'">
   <app-accordion body [accordionItems]="accordionItems">
   </app-accordion>

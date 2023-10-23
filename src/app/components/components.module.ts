@@ -12,6 +12,7 @@ import { ComponentDocsComponent } from './component-docs.component';
 import { TopOfPageComponent } from './top-of-page/top-of-page.component';
 import { LoaderComponent } from './loader/loader.component';
 import { CcInputComponent } from './cc-input/cc-input.component';
+import { ModalComponent } from './modal/modal.component';
 
 const routes = [
   {
@@ -31,7 +32,8 @@ const routes = [
     PomodoroComponent,
     TopOfPageComponent,
     LoaderComponent,
-    CcInputComponent
+    CcInputComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,

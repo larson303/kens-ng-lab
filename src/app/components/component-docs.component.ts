@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject, tap, mergeMap, timer, Subscription } from 'rxjs';
 import { AccordionItem } from 'src/app/components/component-interfaces/accordion-item.interfaces';
+import { LoaderType } from './loader/loader-type.enum';
 
 @Component({
   selector: 'app-component-docs',
@@ -11,6 +12,8 @@ export class ComponentDocsComponent {
 
   public starRating = 3.75;
   ccNumber = '4321432143214321';
+
+  public loaderType = LoaderType.LoadingText;
   
   public accordionItems: AccordionItem[] = [
     {

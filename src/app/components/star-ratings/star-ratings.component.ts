@@ -6,42 +6,30 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./star-ratings.component.scss']
 })
 export class StarRatingsComponent {
-  @Input() public rating: number = 5;
-  highestRating = 5;
+  @Input() rating: number = 0; // You can input rating from parent component
 
-  // calculatedFullStars: number[] = [];
-  // calculatedHasHalfStar: boolean = false;
-  // calculatedEmptyStars: number[] = [];
+  fullStars: number[] = [];
+  hasHalfStar: boolean = false;
+  emptyStars: number[] = [];
 
-
-  // calcStars(this.ratings): void {
-  //   this.calculatedFullStars = Math.floor(this.rating);
-  //   this.calculatedHasHalfStar = (this.rating - Math.floor(this.rating)) >= 0.5 && this.rating !== this.highestRating;
-  //   this.calculatedEmptyStars = Math.floor(this.highestRating - this.rating);
-  // }
-
-
-  public get fullStars(): number[] {
-    const fullStars = Math.floor(this.rating);
-    console.log("fullStars: ", fullStars);
-    return Array(fullStars).fill(0);
+  ngOnChanges() {
+    this.calculateStars();
+    console.log(this.rating);
   }
 
-  public get hasHalfStar(): boolean {
-    const hasHalfStar = (this.rating - Math.floor(this.rating)) >= 0.5 && this.rating !== this.highestRating;
-    console.log("hasHalfStar: ", hasHalfStar);
-    return hasHalfStar;
-  } 
+  private calculateStars(): void {
+    // Calculate full stars
+    const fullStarsCount = Math.floor(this.rating);
+    this.fullStars = Array(fullStarsCount).fill(0);
+    console.log(this.fullStars);
 
-  public get emptyStars(): number[] {
-    let emptyStars = Math.floor(this.highestRating - this.rating);
+    // Check for half star
+    this.hasHalfStar = (this.rating % 1) !== 0;
+    console.log(this.hasHalfStar);
 
-    if (this.rating - Math.floor(this.rating) < .5 ) {
-      emptyStars++;
-    }
-  
-    console.log("emptyStars: ", emptyStars);
-    return Array(emptyStars).fill(0);
+    // Calculate empty stars
+    const emptyStarsCount = 5 - fullStarsCount - (this.hasHalfStar ? 1 : 0); // Assuming you have a max rating of 5
+    this.emptyStars = Array(emptyStarsCount).fill(0);
+    console.log(this.emptyStars);
   }
-
 }
