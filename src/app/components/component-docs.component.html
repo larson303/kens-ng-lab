@@ -1,56 +1,115 @@
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Card'" [subTitle]="'Components'">
-  <p body>
-    Body Content
-  </p>
-  <p footer>
-    Footer
-  </p>
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Card'"
+  [subTitle]="'Components'"
+>
+  <p body>Body Content</p>
+  <p footer>Footer</p>
 </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader Types'" [subTitle]="'Components'">
+<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Modal'" [subTitle]="'Components'">
+  <div body>
+    <app-modal [title]="'Modal Example'" #modal>
+      <p>Modal Body Content</p>
+    </app-modal>
+  </div>
+
+  <div footer>
+    <button (click)="modal.open()" class="button btn-primary">Open Modal</button>
+  </div>
+</app-card>
+
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Loader Types'"
+  [subTitle]="'Components'"
+>
   <app-loader body [isLoading]="false" [loaderType]="loaderType"></app-loader>
-  <button class="button btn-primary" footer (click)="toggleLoader()">Load</button>
+  <button class="button btn-primary" footer (click)="toggleLoader()">
+    Load
+  </button>
 </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Accordian'" [subTitle]="'Components'">
-  <app-accordion body [accordionItems]="accordionItems">
-  </app-accordion>
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Accordian'"
+  [subTitle]="'Components'"
+>
+  <app-accordion body [accordionItems]="accordionItems"> </app-accordion>
 </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Star Ratings'" [subTitle]="'Components'">
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Star Ratings'"
+  [subTitle]="'Components'"
+>
   <app-star-ratings body [rating]="starRating"></app-star-ratings>
 </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Progress Bar'" [subTitle]="'Components'">
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Progress Bar'"
+  [subTitle]="'Components'"
+>
   <app-progress-bar body [value]="progressValue"></app-progress-bar>
 
   <button footer (click)="updateProgress()">Update</button>
 </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Loader'" [subTitle]="'Components'">
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Loader'"
+  [subTitle]="'Components'"
+>
   <app-loader body [isLoading]="isLoading"></app-loader>
-  <button class="button btn-primary" footer (click)="toggleLoader()">Load</button>
+  <button class="button btn-primary" footer (click)="toggleLoader()">
+    Load
+  </button>
 </app-card>
 
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'CC Input'" [subTitle]="'Components'">
-
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'CC Input'"
+  [subTitle]="'Components'"
+>
   <div body>
-    <app-cc-input [ccNumber]="'4321432143214321'" required [isReadOnly]="false"></app-cc-input>
-    <br>
-    <app-cc-input [ccNumber]="'3321432143214321'" required [isReadOnly]="true"></app-cc-input>
-    <br>
-    <app-cc-input [ccNumber]="'4321432143214321'" required [isReadOnly]="true"></app-cc-input>
-    <br>
-    <app-cc-input [ccNumber]="'5321432143214321'" required [isReadOnly]="true"></app-cc-input>
-    <br>
-    <app-cc-input [ccNumber]="'6321432143214321'" required [isReadOnly]="true"></app-cc-input>
+    <app-cc-input
+      [ccNumber]="'4321432143214321'"
+      required
+      [isReadOnly]="false"
+    ></app-cc-input>
+    <br />
+    <app-cc-input
+      [ccNumber]="'3321432143214321'"
+      required
+      [isReadOnly]="true"
+    ></app-cc-input>
+    <br />
+    <app-cc-input
+      [ccNumber]="'4321432143214321'"
+      required
+      [isReadOnly]="true"
+    ></app-cc-input>
+    <br />
+    <app-cc-input
+      [ccNumber]="'5321432143214321'"
+      required
+      [isReadOnly]="true"
+    ></app-cc-input>
+    <br />
+    <app-cc-input
+      [ccNumber]="'6321432143214321'"
+      required
+      [isReadOnly]="true"
+    ></app-cc-input>
   </div>
-
 </app-card>
 
-
-
-<app-card [iconClasses]="'fas fa-info-circle'" [title]="'Go To Top'" [subTitle]="'Components'">
+<app-card
+  [iconClasses]="'fas fa-info-circle'"
+  [title]="'Go To Top'"
+  [subTitle]="'Components'"
+>
   <app-top-of-page body></app-top-of-page>
 </app-card>
 

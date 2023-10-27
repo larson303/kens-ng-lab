@@ -2,28 +2,9 @@
 @import './styles/colors';
 @import './styles/variables';
 @import './styles/mixins';
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
 
-$enable-shadows: true;
-$prefix: "mo-";
-
-* {
-  scroll-behavior: smooth;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-}
 
 i {
   cursor: pointer;
@@ -72,11 +53,8 @@ textarea {
 
 
 button {
-  position: relative;
-
-  display: block;
-  margin: 30px auto;
-  padding: .5rem;
+  margin-left: 30px;
+  padding: 15px;
 
   overflow: hidden;
 
