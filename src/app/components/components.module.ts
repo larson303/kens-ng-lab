@@ -13,6 +13,7 @@ import { TopOfPageComponent } from './top-of-page/top-of-page.component';
 import { LoaderComponent } from './loader/loader.component';
 import { CcInputComponent } from './cc-input/cc-input.component';
 import { ModalComponent } from './modal/modal.component';
+import { QuotesComponent } from './quotes/quotes.component';
 
 const routes = [
   {
@@ -33,7 +34,8 @@ const routes = [
     TopOfPageComponent,
     LoaderComponent,
     CcInputComponent,
-    ModalComponent
+    ModalComponent,
+    QuotesComponent
   ],
   imports: [
     CommonModule,
